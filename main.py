@@ -28,10 +28,14 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
 
+
+        keys = pygame.key.get_pressed()
+        player.update(keys, dt)
+
+
         window.fill((0,0,0))
         player.draw(window)
         pygame.display.flip()
-
         dt = clock.tick(60) / 1000.0
 
 
