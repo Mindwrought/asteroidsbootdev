@@ -1,10 +1,11 @@
 import pygame 
 from constants import *
 from player import Player
+import asteroidfield
 
 updatable = pygame.sprite.Group()
 drawable = pygame.sprite.Group()
-
+asteroids = pygame.sprite.Group()
 
 def main():
     print("Starting Asteroids!")
@@ -19,6 +20,7 @@ def main():
 # start of defining variables code
 
     Player.containers = (updatable, drawable)
+    Asteroid.containers = (asteroids, updatable, drawable)
     clock = pygame.time.Clock()
     dt = 0
     x = SCREEN_WIDTH /2
