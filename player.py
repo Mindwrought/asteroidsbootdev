@@ -1,5 +1,5 @@
 import pygame
-from constants import PLAYER_RADIUS, PLAYER_TURN_SPEED, PLAYER_SPEED
+from constants import *
 from circleshape import CircleShape
 
 class Player(CircleShape):
@@ -31,7 +31,7 @@ class Player(CircleShape):
         self.position += forward * PLAYER_SPEED * dt
 
 
-    def update(self, keys, dt):
+    def update(self, dt):
         keys = pygame.key.get_pressed()
 
         if keys[pygame.K_a]:
